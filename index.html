@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Диабет Баланс — забота о здоровье каждый день" />
+  <title>Диабет Баланс — Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>.modal.hidden { display: none; }</style>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Основная навигация">
+    <a class="brand" href="#top" aria-label="Диабет Баланс, главная"><span class="brand-mark">✦</span><span>Диабет<br><b>Баланс</b></span></a>
+    <nav class="nav">
+      <a class="nav-link active" href="#top"><span>⌂</span>Главная</a>
+      <a class="nav-link" href="#nutrition"><span>♧</span>Моё питание</a>
+      <a class="nav-link" href="#activity"><span>♡</span>Активность</a>
+      <a class="nav-link" href="#progress"><span>⌁</span>Прогресс</a>
+      <a class="nav-link" href="#knowledge"><span>▤</span>База знаний</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="nav-link" href="#settings"><span>⚙</span>Настройки</a>
+      <div class="help-card"><span class="help-icon">?</span><div><b>Нужна помощь?</b><small>Мы всегда рядом</small></div></div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <header class="topbar">
+      <button class="menu-btn" aria-label="Открыть меню">☰</button>
+      <div class="date"><span class="sun">☀</span><span>Пятница, 17 июля</span></div>
+      <div class="top-actions"><button class="sound" aria-label="Озвучить страницу">⌁</button><button class="notification" aria-label="Уведомления">♢<i></i></button><button class="profile"><span>АС</span><b>Анна Сергеева</b><em>⌄</em></button></div>
+    </header>
+
+    <section class="welcome" aria-labelledby="welcome-title">
+      <div><p class="eyebrow">ДОБРОЕ УТРО, АННА</p><h1 id="welcome-title">Сегодня — хороший день<br>для заботы о себе <span>♡</span></h1><p class="subtitle">Ваш спокойный ритм, понятный план и поддержка на каждом шаге.</p></div>
+      <div class="streak"><div class="streak-num">12 <span>дней</span></div><p>Вы заботитесь о себе<br>уже <b>12 дней подряд</b></p><span class="leaf">❋</span></div>
+    </section>
+
+    <section class="metrics" aria-label="Показатели за сегодня">
+      <article class="metric calories"><div class="metric-icon">♨</div><div><p>Калории</p><b>1 240 <small>/ 1 680 ккал</small></b></div><div class="ring ring-74"><span>74%</span></div></article>
+      <article class="metric water"><div class="metric-icon">♧</div><div><p>Вода</p><b><span id="waterValue">5</span> <small>/ 8 стаканов</small></b></div><button class="plus" id="addWater" aria-label="Добавить стакан воды">+</button></article>
+      <article class="metric sugar"><div class="metric-icon">⌁</div><div><p>Уровень сахара</p><b>6,5 <small>ммоль/л</small></b><span class="normal">● В целевом диапазоне</span></div></article>
+      <article class="metric weight"><div class="metric-icon">◒</div><div><p>Текущий вес</p><b>89 <small>кг</small></b><span class="down">Профиль: 68 лет</span></div></article>
+    </section>
+
+    <div class="grid-main">
+      <section class="card meal-card" id="nutrition" aria-labelledby="meal-title">
+        <div class="section-head"><div><p class="eyebrow">ПИТАНИЕ НА СЕГОДНЯ</p><h2 id="meal-title">Ваше меню</h2></div><a href="#" id="fullMenu">Открыть меню <span>→</span></a></div>
+        <div class="meal-tabs" role="tablist"><button class="meal-tab active" data-tab="morning">Утро</button><button class="meal-tab" data-tab="day">День</button><button class="meal-tab" data-tab="evening">Вечер</button></div>
+        <div class="meal-content" id="morning"><img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=500&q=85" alt="Овсяная каша с ягодами"><div class="meal-info"><span class="meal-time">08:00 · Завтрак</span><h3>Овсяная каша с ягодами</h3><p>Сытный и мягкий старт дня</p><div class="tags"><span>320 ккал</span><span>Б: 12 г</span><span>Низкий ГИ</span></div></div><button class="more" aria-label="Подробнее о завтраке">→</button></div>
+        <div class="meal-content hidden" id="day"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=85" alt="Салат с курицей"><div class="meal-info"><span class="meal-time">13:30 · Обед</span><h3>Курица с овощами и киноа</h3><p>Лёгкий обед с хорошим балансом</p><div class="tags"><span>460 ккал</span><span>Б: 34 г</span><span>Низкий ГИ</span></div></div><button class="more" aria-label="Подробнее об обеде">→</button></div>
+        <div class="meal-content hidden" id="evening"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=85" alt="Овощной ужин"><div class="meal-info"><span class="meal-time">19:00 · Ужин</span><h3>Овощное рагу с рыбой</h3><p>Тёплый ужин без тяжести</p><div class="tags"><span>390 ккал</span><span>Б: 29 г</span><span>Низкий ГИ</span></div></div><button class="more" aria-label="Подробнее об ужине">→</button></div>
+        <div class="next-meal"><span class="clock">◷</span><span>Следующий приём пищи через <b>1 ч 20 мин</b></span><button id="reminder">Напомнить мне</button></div>
+      </section>
+
+      <aside class="card reminder-card"><div class="section-head"><div><p class="eyebrow">БЛИЖАЙШЕЕ</p><h2>Напоминание</h2></div><button class="dots">•••</button></div><div class="reminder-body"><div class="med-icon">✚</div><div><span>В 10:30</span><h3>Примите лекарство</h3><p>Метформин · 500 мг</p></div></div><button class="done-btn" id="medicineDone">Отметить выполненным <span>✓</span></button><a href="#" class="all-reminders">Все напоминания <span>→</span></a></aside>
+    </div>
+
+    <section class="card activity" id="activity" aria-labelledby="activity-title"><div class="section-head"><div><p class="eyebrow">ДВИЖЕНИЕ ДЛЯ САМОЧУВСТВИЯ</p><h2 id="activity-title">Небольшая тренировка на сегодня</h2></div><span class="duration">◷ 20 минут</span></div><div class="activity-grid"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=85" alt="Женщина выполняет упражнение дома"><div><span class="level">НАЧИНАЮЩИЙ</span><h3>Мягкая зарядка для всего тела</h3><p>Бережно разомнём суставы, улучшим кровообращение и добавим энергии.</p><div class="exercise-list"><span>✓  Разминка сидя</span><span>✓  Упражнения у опоры</span><span>✓  Спокойная растяжка</span></div></div><button class="start-workout" id="startWorkout">Начать тренировку <span>▶</span></button></div></section>
+
+      <section class="progress-section" id="progress"><div class="section-head"><div><p class="eyebrow">ВАШ ПУТЬ</p><h2>Прогресс за неделю</h2></div><select aria-label="Период графика"><option>Эта неделя</option><option>Этот месяц</option></select></div><div class="progress-grid"><article class="card chart-card"><div class="chart-title"><div><h3>Вес</h3><p>Текущий: <b>89 кг</b></p></div><span class="down">Начальная точка</span></div><div class="chart"><div class="y-labels"><span>90</span><span>89,5</span><span>89</span></div><svg viewBox="0 0 560 155" preserveAspectRatio="none" aria-label="График веса"><defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8d8c2" stop-opacity=".6"/><stop offset="1" stop-color="#b8d8c2" stop-opacity="0"/></linearGradient></defs><path d="M0,25 C55,36 80,45 120,42 S178,35 210,54 S280,65 320,78 S370,66 408,89 S475,108 560,128 L560,155 L0,155Z" fill="url(#fill)"/><path d="M0,25 C55,36 80,45 120,42 S178,35 210,54 S280,65 320,78 S370,66 408,89 S475,108 560,128" fill="none" stroke="#5b9a70" stroke-width="3"/><circle cx="560" cy="128" r="5" fill="#fff" stroke="#5b9a70" stroke-width="3"/></svg><div class="x-labels"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div></div></article><article class="card steps-card"><div><h3>Шаги</h3><p>Сегодня</p><b>5 240 <small>/ 7 000</small></b></div><div class="steps-visual"><div class="steps-ring"><span>75%</span></div><span class="shoe">♧</span></div><p class="step-note">Ещё 1 760 шагов — и цель достигнута!</p></article></div></section>
+
+    <section class="knowledge" id="knowledge"><div class="section-head"><div><p class="eyebrow">ПОЛЕЗНОЕ ДЛЯ ВАС</p><h2>Читайте с заботой о здоровье</h2></div><a href="#">Все статьи <span>→</span></a></div><div class="article-grid"><article><span>ПИТАНИЕ</span><h3>Как выбирать продукты с низким гликемическим индексом</h3><a href="#">Читать  →</a></article><article><span>АКТИВНОСТЬ</span><h3>5 простых упражнений, которые можно делать дома</h3><a href="#">Читать  →</a></article><article><span>САМОЧУВСТВИЕ</span><h3>Почему регулярный сон важен для уровня сахара</h3><a href="#">Читать  →</a></article></div></section>
+    <footer>Диабет Баланс · Информация на сайте не заменяет консультацию врача.</footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="modal-close" aria-label="Закрыть">×</button><span class="level">ТРЕНИРОВКА · 20 МИНУТ</span><h2 id="modalTitle">Мягкая зарядка для всего тела</h2><ol><li>Разминка сидя — 4 минуты</li><li>Упражнения у опоры — 12 минут</li><li>Спокойная растяжка — 4 минуты</li></ol><button class="start-workout modal-start">Начать сейчас <span>▶</span></button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
