@@ -13,6 +13,15 @@ document.querySelectorAll('.meal-tab').forEach(tab => tab.addEventListener('clic
   document.querySelectorAll('.meal-content').forEach(item => item.classList.add('hidden'));
   tab.classList.add('active');
   $(`#${tab.dataset.tab}`).classList.remove('hidden');
+  const recipes = {
+    morning: ['Овсяная каша с ягодами · 1 порция', 'Продукты: овсяные хлопья 45 г, молоко 1,5% 180 мл, черника 60 г, грецкий орех 10 г.', 'Как приготовить: сварите хлопья в молоке 5–7 минут. Добавьте ягоды и орехи перед подачей.'],
+    day: ['Курица с овощами и киноа · 1 порция', 'Продукты: филе курицы 130 г, киноа сухая 45 г, кабачок 120 г, перец 80 г, оливковое масло 5 мл.', 'Как приготовить: отварите киноа 15 минут. Курицу и овощи потушите 12–15 минут, смешайте с крупой.'],
+    evening: ['Овощное рагу с рыбой · 1 порция', 'Продукты: филе белой рыбы 140 г, брокколи 150 г, кабачок 120 г, томат 80 г, оливковое масло 5 мл.', 'Как приготовить: запеките рыбу 15 минут при 180 °C. Овощи потушите 10 минут и подайте рядом.']
+  };
+  const [title, ingredients, method] = recipes[tab.dataset.tab];
+  $('#recipeTitle').textContent = title;
+  $('#recipeIngredients').innerHTML = `<b>Продукты:</b> ${ingredients.replace('Продукты: ', '')}`;
+  $('#recipeMethod').innerHTML = `<b>Как приготовить:</b> ${method.replace('Как приготовить: ', '')}`;
 }));
 
 let water = 5;
